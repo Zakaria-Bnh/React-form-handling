@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage:{
+        'tealBackground': 'url(https://images.pexels.com/photos/7233116/pexels-photo-7233116.jpeg)'
+      }
+    },
   },
   plugins: [],
 }

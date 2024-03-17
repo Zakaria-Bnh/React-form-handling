@@ -1,12 +1,13 @@
 import { useState } from "react";
 import FormInput from "./FormInput";
+
 const Contact = () => {
   const [values, setValues] = useState({
     fullname: "",
     email: "",
     password: "",
     phone: "",
-    adress: "",
+    address: "",
   });
 
   const inputProperties = [
@@ -56,13 +57,14 @@ const Contact = () => {
   };
   console.log(values);
   return (
-    <form className="flex flex-col border border-slate-200 rounded-md w-10/12 max-w-[500px] py-6 px-6 gap-4">
+    <form className="flex flex-col bg-white rounded-md w-10/12 max-w-[500px] py-6 px-6 gap-4">
       {inputProperties.map((input) => (
         <FormInput
           key={input.id}
           {...input}
           value={values[input.name]}
           onChange={handleOnChange}
+          
         />
       ))}
       <button
